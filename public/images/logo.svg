@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120">
+  <g fill="none" stroke="#8B6914" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" transform="translate(12 22)">
+    <path d="M10 60h110" />
+    <path d="M20 60V16" />
+    <path d="M100 60V16" />
+    <path d="M12 18h96" />
+    <path d="M28 10l22 8" />
+    <path d="M92 10l-22 8" />
+  </g>
+  <text x="150" y="52" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="700" font-size="30">Your Local Pergola</text>
+  <text x="150" y="86" fill="#8B6914" font-family="Inter, sans-serif" font-weight="600" font-size="26">Installer</text>
+</svg>

@@ -1,0 +1,37 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/pavilions"
+  to = "/pavillions/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pavilions/*"
+  to = "/pavillions/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/carport"
+  to = "/carpot/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/carport/*"
+  to = "/carpot/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/:path([^.]*)"
+  to = "/:path/"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

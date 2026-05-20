@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form</title>
+</head>
+<body>
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
+    <input type="hidden" name="form-name" value="contact" />
+    <p hidden>
+      <label>Don't fill this out: <input name="bot-field" /></label>
+    </p>
+    <p>
+      <label>Full Name: <input type="text" name="fullName" required /></label>
+    </p>
+    <p>
+      <label>Email: <input type="email" name="email" required /></label>
+    </p>
+    <p>
+      <label>Phone: <input type="tel" name="phone" required /></label>
+    </p>
+    <p>
+      <label>Service Type: <input type="text" name="serviceType" required /></label>
+    </p>
+    <p>
+      <label>Address: <input type="text" name="address" required /></label>
+    </p>
+    <p>
+      <label>Message: <textarea name="message" required></textarea></label>
+    </p>
+    <p>
+      <label>Agree: <input type="text" name="agreeToContact" /></label>
+    </p>
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </form>
+</body>
+</html>

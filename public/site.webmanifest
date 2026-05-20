@@ -1,0 +1,30 @@
+{
+  "name": "Your Local Pergola Installer",
+  "short_name": "YLP Installer",
+  "description": "Pergola design and installation across Sydney Metropolitan Area.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#1A1A1A",
+  "theme_color": "#1A1A1A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
