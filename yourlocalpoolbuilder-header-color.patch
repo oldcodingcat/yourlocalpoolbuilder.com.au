@@ -1,0 +1,20 @@
+--- ylpb_orig_for_patch/yourlocalpoolbuilder.com.au/src/components/Header.tsx	2026-05-20 22:40:56.000000000 +0000
++++ ylpb_color/yourlocalpoolbuilder.com.au/src/components/Header.tsx	2026-05-20 23:01:47.215175675 +0000
+@@ -21,7 +21,7 @@
+   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+ 
+   return (
+-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-dark/95 backdrop-blur-sm">
++    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-[#09233C] backdrop-blur-sm">
+       <div className="container-custom flex h-24 items-center justify-between">
+         <a
+           href="/"
+@@ -108,7 +108,7 @@
+ 
+       {/* Mobile nav */}
+       {mobileOpen && (
+-        <div className="max-h-[calc(100vh-6rem)] overflow-y-auto border-t border-white/10 bg-[#071b2c] lg:hidden">
++        <div className="max-h-[calc(100vh-6rem)] overflow-y-auto border-t border-white/10 bg-[#09233C] lg:hidden">
+           <nav className="container-custom py-6 text-white">
+             <div className="space-y-1">
+               <a href="/" className="block py-3 text-sm uppercase tracking-wide hover:text-primary">

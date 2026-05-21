@@ -1,6 +1,8 @@
-/pavillions/  /pavilions/  301
-/pavillions   /pavilions/  301
-/carpot/      /carport/    301
-/carpot       /carport/    301
-/about        /about-us/   301
-/services     /service/    301
+/pavillions/  /pavilions/    301
+/pavillions   /pavilions/    301
+/carpot/      /carport/      301
+/carpot       /carport/      301
+/about        /about-us/     301
+/service      /services/     301
+/contact      /contact-us/   301
+/*            /index.html    200
