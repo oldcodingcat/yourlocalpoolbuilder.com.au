@@ -3,7 +3,7 @@ import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import BrandLogo from "@/components/BrandLogo";
 
 const phoneDisplay = "02 5301 3397";
-const phoneHref = "tel:+61253013397";
+const phoneHref = "tel:0253013397";
 
 const services = [
   { name: "Inground Pools", href: "/inground-pools/" },
@@ -38,13 +38,9 @@ const Header = () => {
           </a>
 
           <div className="group relative">
-            <a
-              href="/services/"
-              className="flex items-center gap-1 transition-colors hover:text-primary"
-            >
+            <a href="/services/" className="flex items-center gap-1 transition-colors hover:text-primary">
               Services <ChevronDown className="h-3.5 w-3.5" />
             </a>
-
             <div className="invisible absolute left-0 top-full pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
               <div className="w-[300px] border border-white/10 bg-[#071b2c] p-3 shadow-xl">
                 {services.map((item) => (
@@ -65,13 +61,9 @@ const Header = () => {
           </a>
 
           <div className="group relative">
-            <a
-              href="/about-us/"
-              className="flex items-center gap-1 transition-colors hover:text-primary"
-            >
+            <a href="/about-us/" className="flex items-center gap-1 transition-colors hover:text-primary">
               About Us <ChevronDown className="h-3.5 w-3.5" />
             </a>
-
             <div className="invisible absolute left-0 top-full pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
               <div className="w-[220px] border border-white/10 bg-[#071b2c] p-3 shadow-xl">
                 {aboutLinks.map((item) => (
@@ -95,7 +87,7 @@ const Header = () => {
         <div className="hidden items-center lg:flex">
           <a
             href={phoneHref}
-            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm bg-primary px-5 py-3 text-xs font-semibold uppercase tracking-wide text-white transition-all hover:bg-primary/90"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-sm bg-primary px-5 py-3 text-xs font-semibold uppercase tracking-wide text-[#09233C] transition-all hover:bg-primary/90"
           >
             <Phone className="h-4 w-4" />
             Request Quote
@@ -110,11 +102,7 @@ const Header = () => {
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
         >
-          {mobileOpen ? (
-            <X className="h-7 w-7" />
-          ) : (
-            <Menu className="h-7 w-7" />
-          )}
+          {mobileOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
         </button>
       </div>
 
@@ -123,10 +111,7 @@ const Header = () => {
         <div className="max-h-[calc(100vh-6rem)] overflow-y-auto border-t border-white/10 bg-[#09233C] lg:hidden">
           <nav className="container-custom py-6 text-white">
             <div className="space-y-1">
-              <a
-                href="/"
-                className="block py-3 text-sm uppercase tracking-wide hover:text-primary"
-              >
+              <a href="/" className="block py-3 text-sm uppercase tracking-wide hover:text-primary">
                 Home
               </a>
 
@@ -138,28 +123,16 @@ const Header = () => {
                   aria-expanded={mobileServicesOpen}
                 >
                   Services
-                  <ChevronDown
-                    className={`h-4 w-4 transition-transform ${
-                      mobileServicesOpen ? "rotate-180" : ""
-                    }`}
-                  />
+                  <ChevronDown className={`h-4 w-4 transition-transform ${mobileServicesOpen ? "rotate-180" : ""}`} />
                 </button>
 
                 {mobileServicesOpen && (
                   <div className="border-l border-white/10 pb-3 pl-4">
-                    <a
-                      href="/services/"
-                      className="block py-2 text-sm text-primary"
-                    >
+                    <a href="/services/" className="block py-2 text-sm text-primary">
                       View All Services
                     </a>
-
                     {services.map((item) => (
-                      <a
-                        key={item.href}
-                        href={item.href}
-                        className="block py-2 text-sm text-white/70 hover:text-primary"
-                      >
+                      <a key={item.href} href={item.href} className="block py-2 text-sm text-white/70 hover:text-primary">
                         {item.name}
                       </a>
                     ))}
@@ -167,10 +140,7 @@ const Header = () => {
                 )}
               </div>
 
-              <a
-                href="/gallery/"
-                className="block py-3 text-sm uppercase tracking-wide hover:text-primary"
-              >
+              <a href="/gallery/" className="block py-3 text-sm uppercase tracking-wide hover:text-primary">
                 Gallery
               </a>
 
@@ -182,28 +152,16 @@ const Header = () => {
                   aria-expanded={mobileAboutOpen}
                 >
                   About Us
-                  <ChevronDown
-                    className={`h-4 w-4 transition-transform ${
-                      mobileAboutOpen ? "rotate-180" : ""
-                    }`}
-                  />
+                  <ChevronDown className={`h-4 w-4 transition-transform ${mobileAboutOpen ? "rotate-180" : ""}`} />
                 </button>
 
                 {mobileAboutOpen && (
                   <div className="border-l border-white/10 pb-3 pl-4">
-                    <a
-                      href="/about-us/"
-                      className="block py-2 text-sm text-primary"
-                    >
+                    <a href="/about-us/" className="block py-2 text-sm text-primary">
                       About Us
                     </a>
-
                     {aboutLinks.map((item) => (
-                      <a
-                        key={item.href}
-                        href={item.href}
-                        className="block py-2 text-sm text-white/70 hover:text-primary"
-                      >
+                      <a key={item.href} href={item.href} className="block py-2 text-sm text-white/70 hover:text-primary">
                         {item.name}
                       </a>
                     ))}
@@ -211,10 +169,7 @@ const Header = () => {
                 )}
               </div>
 
-              <a
-                href="/contact-us/"
-                className="block py-3 text-sm uppercase tracking-wide hover:text-primary"
-              >
+              <a href="/contact-us/" className="block py-3 text-sm uppercase tracking-wide hover:text-primary">
                 Contact us
               </a>
             </div>

@@ -1,157 +1,67 @@
-import { Shield, CheckCircle, Clock, Award } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { useState, useEffect } from "react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-const marqueeImages1 = [
-  "/images/pergolas-4.jpg",
-  "/images/pergolas-5.jpg",
-  "/images/pergolas.jpeg",
-  "/images/sunroof.jpg",
-];
-
-const marqueeImages2 = [
-  "/images/pergolas-2.jpg",
-  "/images/patios.jpg",
-  "/images/gazebos.jpg",
-  "/images/flat-roof.jpg",
+const projectTypes = [
+  "Luxury concrete pools",
+  "Inground swimming pools",
+  "Plunge pools and spas",
+  "Pool renovations and upgrades",
 ];
 
 const About = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const duration1 = isMobile ? 15 : 30;
-  const duration2 = isMobile ? 17.5 : 35;
-
   return (
-    <section id="about" className="bg-background section-padding relative overflow-hidden">
-      <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Scrolling Images — Left */}
-          <div className="h-[500px] md:h-[600px] relative overflow-hidden">
-            <div className="flex gap-4 h-full">
-              {/* Column 1 — Scroll Up */}
-              <div className="flex-1 overflow-hidden">
-                <div
-                  style={{
-                    animation: `marqueeUp ${duration1}s linear infinite`,
-                  }}
-                >
-                  <div className="flex flex-col gap-3">
-                    {[...marqueeImages1, ...marqueeImages1].map((img, index) => (
-                      <div key={index} className="aspect-[4/5] overflow-hidden rounded-sm">
-                        <img
-                          src={img}
-                          alt="Pergola installation project"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              {/* Column 2 — Scroll Down */}
-              <div className="flex-1 overflow-hidden">
-                <div
-                  style={{
-                    animation: `marqueeDown ${duration2}s linear infinite`,
-                  }}
-                >
-                  <div className="flex flex-col gap-3">
-                    {[...marqueeImages2, ...marqueeImages2].map((img, index) => (
-                      <div key={index} className="aspect-[4/5] overflow-hidden rounded-sm">
-                        <img
-                          src={img}
-                          alt="Pergola installation project"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Gradient Overlays — Desktop */}
-            <div className="hidden md:block absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
-            <div className="hidden md:block absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-background to-transparent pointer-events-none z-10" />
-            {/* Gradient Overlays — Mobile */}
-            <div className="md:hidden absolute top-0 left-0 right-0 h-[50px] bg-gradient-to-b from-background to-transparent pointer-events-none z-10" />
-            <div className="md:hidden absolute bottom-0 left-0 right-0 h-[50px] bg-gradient-to-t from-background to-transparent pointer-events-none z-10" />
+    <section id="quote" className="bg-background py-18 md:py-24">
+      <div className="container-custom grid gap-10 lg:grid-cols-[1fr_0.86fr] lg:items-stretch">
+        <div className="rounded-sm bg-white p-8 shadow-subtle md:p-12">
+          <p className="text-eyebrow mb-4 text-primary">Custom pool construction</p>
+          <h2 className="font-heading text-4xl font-semibold leading-tight text-foreground md:text-5xl">
+            Luxury Custom Pool Builders in Sydney
+          </h2>
+          <div className="mt-6 space-y-4 font-body text-sm leading-7 text-muted-foreground md:text-base">
+            <p>
+              At Your Local Pool Builder, we specialise in refined residential pool construction for homeowners who want more than a standard swimming pool. Our team plans and builds custom pools that feel considered, architectural and easy to enjoy every day.
+            </p>
+            <p>
+              From first consultation through design, approvals, excavation, construction and finishing details, we focus on clear communication, quality workmanship and a pool that complements your home, landscape and lifestyle.
+            </p>
           </div>
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            {projectTypes.map((item) => (
+              <div key={item} className="flex items-center gap-3 font-body text-sm font-medium text-foreground">
+                <CheckCircle2 className="h-5 w-5 flex-none text-primary" />
+                {item}
+              </div>
+            ))}
+          </div>
+          <a href="/about-us/" className="mt-8 inline-flex items-center gap-2 font-body text-sm font-semibold uppercase tracking-[0.18em] text-foreground hover:text-primary">
+            Read more <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
 
-          {/* Text Content — Right */}
-          <AnimatedSection animation="slide-in-right" className="space-y-6">
-            <p className="text-eyebrow text-primary">[ ABOUT US ]</p>
-            <h2 className="font-heading text-4xl md:text-5xl tracking-wide uppercase leading-tight">
-              <span className="text-foreground">Your Trusted Local</span>{" "}
-              <span className="text-gradient-primary">Pergola Installation Team</span>
-            </h2>
-            <div className="space-y-4 text-sm text-muted-foreground font-body font-light leading-relaxed">
-              <p>
-                Your Local Pergola Installer is a family-owned business delivering
-                dependable pergola installation services across Sydney Metropolitan
-                Area. We handle everything from everyday repairs to complex
-                installations.
-              </p>
-              <p>
-                Our licensed and insured pergola installers focus on quality
-                workmanship, clear communication, and practical solutions that last.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6 pt-6">
-              <div className="flex items-center gap-3">
-                <Shield className="h-6 w-6 text-primary" />
-                <div>
-                  <div className="font-body font-semibold text-sm">Licensed & Insured</div>
-                  <div className="font-body text-xs">Qualified local team</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="h-6 w-6 text-primary" />
-                <div>
-                  <div className="font-body font-semibold text-sm">Locally Trusted</div>
-                  <div className="font-body text-xs">Sydney Metropolitan Area</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <Clock className="h-6 w-6 text-primary" />
-                <div>
-                  <div className="font-body font-semibold text-sm">Fast Response</div>
-                  <div className="font-body text-xs">Prompt bookings and call-outs</div>
-                </div>
-              </div>
-            </div>
-            <div className="pt-6">
-              <Button
-                size="lg"
-                className="btn-premium text-white text-sm font-body font-semibold uppercase tracking-wide rounded group"
-                onClick={() => (window.location.href = "/about-us")}
-              >
-                LEARN MORE ABOUT US
-                <Award className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
-          </AnimatedSection>
+        <div className="bg-[#09233C] p-7 text-white shadow-elevated md:p-10">
+          <p className="text-eyebrow text-center text-primary">Request a quote</p>
+          <div className="mx-auto my-4 h-[1px] w-40 bg-primary/70" />
+          <form className="space-y-3" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
+            <input type="hidden" name="form-name" value="contact" />
+            <p className="hidden"><label>Don&apos;t fill this out:<input name="bot-field" /></label></p>
+            <input name="name" required placeholder="Name" className="h-12 w-full border border-white/20 bg-white px-4 font-body text-sm text-[#09233C] outline-none focus:border-primary" />
+            <input name="email" type="email" required placeholder="Email" className="h-12 w-full border border-white/20 bg-white px-4 font-body text-sm text-[#09233C] outline-none focus:border-primary" />
+            <input name="phone" type="tel" required placeholder="Phone" className="h-12 w-full border border-white/20 bg-white px-4 font-body text-sm text-[#09233C] outline-none focus:border-primary" />
+            <input name="address" required placeholder="Suburb / Project location" className="h-12 w-full border border-white/20 bg-white px-4 font-body text-sm text-[#09233C] outline-none focus:border-primary" />
+            <select name="service" required className="h-12 w-full border border-white/20 bg-white px-4 font-body text-sm text-[#09233C] outline-none focus:border-primary">
+              <option value="">Project type</option>
+              <option value="inground-pools">Inground Pool</option>
+              <option value="concrete-pools">Concrete Pool</option>
+              <option value="plunge-pools">Plunge Pool</option>
+              <option value="pool-renovations">Pool Renovation</option>
+              <option value="spas">Spa</option>
+            </select>
+            <textarea name="message" required placeholder="Tell us about your pool project" rows={5} className="w-full border border-white/20 bg-white px-4 py-3 font-body text-sm text-[#09233C] outline-none focus:border-primary" />
+            <button type="submit" className="w-full bg-primary px-5 py-4 font-body text-xs font-bold uppercase tracking-[0.2em] text-[#09233C] transition hover:bg-white">
+              Send
+            </button>
+          </form>
         </div>
       </div>
-
-      <style>{`
-        @keyframes marqueeUp {
-          0% { transform: translateY(0); }
-          100% { transform: translateY(-50%); }
-        }
-        @keyframes marqueeDown {
-          0% { transform: translateY(-50%); }
-          100% { transform: translateY(0); }
-        }
-      `}</style>
     </section>
   );
 };

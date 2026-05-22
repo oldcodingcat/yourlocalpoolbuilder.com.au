@@ -1,0 +1,44 @@
+diff --git a/src/components/Process.tsx b/src/components/Process.tsx
+index d6e42de..1b30cb0 100644
+--- a/src/components/Process.tsx
++++ b/src/components/Process.tsx
+@@ -68,18 +68,28 @@ const Process = () => {
+           </div>
+         </div>
+ 
+-        <div className="mx-auto mt-14 grid max-w-5xl overflow-hidden bg-primary shadow-elevated lg:grid-cols-[0.95fr_1.05fr]">
+-          <div className="p-8 text-[#09233C] md:p-10">
+-            <p className="text-eyebrow mb-3 text-[#09233C]/70">Ready to dive in?</p>
+-            <h3 className="font-heading text-4xl font-semibold leading-tight">Let’s shape your dream pool</h3>
+-            <p className="mt-4 font-body text-sm leading-7 text-[#09233C]/78">
+-              Share your vision with our Sydney pool builders and we’ll help you understand the best design direction, construction approach and next steps.
+-            </p>
+-            <a href="#quote" className="mt-6 inline-flex bg-[#09233C] px-6 py-3 font-body text-xs font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-[#09233C]">
+-              Start a quote
+-            </a>
++        <div className="mx-auto mt-14 max-w-5xl overflow-hidden bg-primary shadow-elevated">
++          <div className="grid lg:min-h-[340px] lg:grid-cols-[0.9fr_1.1fr]">
++            <div className="relative z-10 flex flex-col justify-center p-8 text-[#09233C] md:p-10 lg:pr-16">
++              <p className="text-eyebrow mb-3 text-[#09233C]/70">Ready to dive in?</p>
++              <h3 className="font-heading text-4xl font-semibold leading-tight md:text-5xl">Let’s shape your dream pool</h3>
++              <p className="mt-4 max-w-xl font-body text-sm leading-7 text-[#09233C]/78 md:text-base">
++                Share your vision with our Sydney pool builders and we’ll help you understand the best design direction, construction approach and next steps.
++              </p>
++              <a href="#quote" className="mt-6 inline-flex w-fit bg-[#09233C] px-6 py-3 font-body text-xs font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white hover:text-[#09233C]">
++                Start a quote
++              </a>
++            </div>
++
++            <div className="relative min-h-[260px] overflow-hidden lg:min-h-full lg:[clip-path:polygon(16%_0,100%_0,100%_100%,0_100%)]">
++              <img
++                src="/images/yourlocalpoolbuilder-02.webp"
++                alt="Modern custom swimming pool beside a luxury home"
++                className="absolute inset-0 h-full w-full object-cover object-center lg:scale-105"
++              />
++              <div className="absolute inset-0 bg-[#09233C]/10" />
++            </div>
+           </div>
+-          <img src="/images/yourlocalpoolbuilder-03.webp" alt="Luxury swimming pool at sunset" className="h-full min-h-[280px] w-full object-cover" />
+         </div>
+       </div>
+     </section>

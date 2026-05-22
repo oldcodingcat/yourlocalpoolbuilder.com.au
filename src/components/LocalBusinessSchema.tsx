@@ -1,39 +1,51 @@
-import { offices } from "@/data/offices";
-import { services } from "@/data/services";
+const poolServices = [
+  {
+    name: "Inground Pools",
+    description: "Inground pool design and construction for Sydney homes.",
+  },
+  {
+    name: "Concrete Pools",
+    description: "Luxury custom concrete pool construction across Sydney.",
+  },
+  {
+    name: "Plunge Pools",
+    description: "Compact plunge pool design and construction for premium outdoor spaces.",
+  },
+  {
+    name: "Pool Renovations",
+    description: "Pool renovations, resurfacing, upgrades and modernisation.",
+  },
+  {
+    name: "Spas",
+    description: "Custom spa construction and integrated pool wellness features.",
+  },
+];
 
 export const LocalBusinessSchema = () => {
   const schema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    name: "Your Local Pergola Installer",
-    url: "https://yourlocalpergolainstaller.com.au",
-    telephone: "+61258496376",
-    areaServed: "Sydney Metropolitan Area, NSW, Australia",
-    location: Object.values(offices).map((office) => ({
-      "@type": "Place",
-      name: office.name,
-      telephone: "+61258496376",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: office.address,
-        addressRegion: "NSW",
-        addressCountry: "AU",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: office.lat,
-        longitude: office.lng,
-      },
-    })),
+    name: "Your Local Pool Builder",
+    url: "https://yourlocalpoolbuilder.com.au",
+    telephone: "+61253013397",
+    image: "https://yourlocalpoolbuilder.com.au/yourlocalpoolbuilder.webp",
+    areaServed: "Sydney, NSW, Australia",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Sydney",
+      addressRegion: "NSW",
+      addressCountry: "AU",
+    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Pergola Installation Services",
-      itemListElement: services.map((service) => ({
+      name: "Luxury Pool Building Services",
+      itemListElement: poolServices.map((service) => ({
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
           name: service.name,
           description: service.description,
+          areaServed: "Sydney, NSW, Australia",
         },
       })),
     },

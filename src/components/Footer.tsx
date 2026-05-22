@@ -1,71 +1,69 @@
 import { Link } from "react-router-dom";
 import BrandLogo from "@/components/BrandLogo";
-import { services } from "@/data/services";
-import { officeDisplayOrder, offices } from "@/data/offices";
 
-const serviceFooterLabel = (slug: string, name: string) => (slug === "carpot" ? "Carports" : name);
+const services = [
+  { label: "Inground Pools", to: "/inground-pools/" },
+  { label: "Concrete Pools", to: "/concrete-pools/" },
+  { label: "Plunge Pools", to: "/plunge-pools/" },
+  { label: "Pool Renovations", to: "/pool-renovations/" },
+  { label: "Spas", to: "/spas/" },
+];
 
 const quickLinks = [
   { label: "Home", to: "/" },
+  { label: "Services", to: "/services/" },
+  { label: "Gallery", to: "/gallery/" },
   { label: "About Us", to: "/about-us/" },
-  { label: "Services", to: "/service/" },
   { label: "Blog", to: "/blog/" },
-  { label: "Contact", to: "/contact/" },
-  { label: "Legal", to: "/legal/" },
-] as const;
+  { label: "Contact Us", to: "/contact-us/" },
+];
 
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-dark text-white border-t border-border">
-      <div className="container-custom py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="border-t border-white/10 bg-[#09233C] text-white">
+      <div className="container-custom grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="h-16 w-[260px] mb-4">
+          <div className="mb-5 h-16 w-[260px]">
             <BrandLogo className="h-full w-full" />
           </div>
-          <p className="text-secondary text-sm">
-            Custom pergola installation and outdoor structure builders across Sydney Metropolitan Area.
+          <p className="font-body text-sm leading-7 text-white/70">
+            Luxury custom pool builders creating refined concrete pools, inground pools, plunge pools, spas and pool renovations across Sydney.
           </p>
         </div>
         <div>
-          <h3 className="font-heading text-2xl mb-4">Services</h3>
-          <ul className="space-y-1 text-secondary text-sm">
+          <h3 className="mb-4 font-heading text-2xl font-semibold">Services</h3>
+          <ul className="space-y-2 font-body text-sm text-white/70">
             {services.map((s) => (
-              <li key={s.slug}>
-                <Link to={`/${s.slug}/`} className="hover:text-primary transition-colors">
-                  {serviceFooterLabel(s.slug, s.name)}
-                </Link>
+              <li key={s.to}>
+                <Link to={s.to} className="transition-colors hover:text-primary">{s.label}</Link>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h3 className="font-heading text-2xl mb-4">Quick Links</h3>
-          <ul className="space-y-1 text-secondary text-sm">
+          <h3 className="mb-4 font-heading text-2xl font-semibold">Quick Links</h3>
+          <ul className="space-y-2 font-body text-sm text-white/70">
             {quickLinks.map((item) => (
               <li key={item.to}>
-                <Link to={item.to} className="hover:text-primary transition-colors">
-                  {item.label}
-                </Link>
+                <Link to={item.to} className="transition-colors hover:text-primary">{item.label}</Link>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h3 className="font-heading text-2xl mb-4">Contact</h3>
-          <a href="tel:+61258496376" className="text-secondary hover:text-primary transition-colors">
-            (02) 5849 6376
+          <h3 className="mb-4 font-heading text-2xl font-semibold">Contact Us</h3>
+          <a href="tel:0253013397" className="font-body text-sm text-white/70 transition-colors hover:text-primary">
+            02 5301 3397
           </a>
-          <ul className="mt-4 space-y-1 text-secondary text-sm">
-            {officeDisplayOrder.map((officeKey) => (
-              <li key={officeKey}>
-                {offices[officeKey].name}: {offices[officeKey].address}
-              </li>
-            ))}
-          </ul>
+          <p className="mt-4 font-body text-sm leading-7 text-white/70">
+            Sydney, NSW<br />Luxury pool design and construction consultations by appointment.
+          </p>
         </div>
       </div>
-      <div className="container-custom py-6 border-t border-border text-secondary text-sm">© {year} Your Local Pergola Installer</div>
+      <div className="container-custom border-t border-white/10 py-6 font-body text-sm text-white/60">
+        © {year} Your Local Pool Builder. All rights reserved.
+      </div>
     </footer>
   );
 };
