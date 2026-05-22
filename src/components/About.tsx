@@ -18,7 +18,7 @@ const About = () => {
           </h2>
           <div className="mt-6 space-y-4 font-body text-sm leading-7 text-muted-foreground md:text-base">
             <p>
-              At Your Local Pool Builder, we specialise in refined residential pool construction for homeowners who want more than a standard swimming pool. Our team plans and builds custom pools that feel considered, architectural and easy to enjoy every day.
+              At Your Local Pool Builders, we specialise in refined residential pool construction for homeowners who want more than a standard swimming pool. Our team plans and builds custom pools that feel considered, architectural and easy to enjoy every day.
             </p>
             <p>
               From first consultation through design, approvals, excavation, construction and finishing details, we focus on clear communication, quality workmanship and a pool that complements your home, landscape and lifestyle.
