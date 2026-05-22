@@ -258,7 +258,7 @@ const Blog = () => {
                   </p>
 
                   <a
-                    href="tel:+61253013397"
+                    href="tel:0253013397"
                     className="mt-6 inline-flex items-center gap-2 font-body text-xs font-semibold uppercase tracking-[0.18em] text-primary"
                   >
                     Request a quote

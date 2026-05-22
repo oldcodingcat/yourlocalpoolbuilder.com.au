@@ -35,7 +35,7 @@ const Hero = () => {
               Schedule an appointment <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="tel:+61253013397"
+              href="tel:0253013397"
               className="inline-flex items-center justify-center gap-2 border border-white/25 px-7 py-4 font-body text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:border-primary hover:text-primary"
             >
               <Phone className="h-4 w-4" /> 02 5301 3397

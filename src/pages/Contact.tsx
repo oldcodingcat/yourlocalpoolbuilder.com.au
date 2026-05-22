@@ -13,7 +13,7 @@ const contactCards = [
     icon: Phone,
     label: "Call us",
     value: "02 5301 3397",
-    href: "tel:+61253013397",
+    href: "tel:0253013397",
   },
   {
     icon: Mail,
@@ -141,7 +141,7 @@ const Contact = () => {
 
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="tel:+61253013397"
+                  href="tel:0253013397"
                   className="inline-flex items-center justify-center gap-3 bg-primary px-7 py-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-[#09233C] transition hover:bg-white"
                 >
                   Call 02 5301 3397
@@ -228,7 +228,7 @@ const Contact = () => {
                   <p className="mt-4 font-body text-sm leading-7 text-white/70">
                     Call us on{" "}
                     <a
-                      href="tel:+61253013397"
+                      href="tel:0253013397"
                       className="font-semibold text-primary"
                     >
                       02 5301 3397

@@ -121,7 +121,7 @@ const ServicePage = () => {
 
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="tel:+61253013397"
+                  href="tel:0253013397"
                   className="inline-flex items-center justify-center gap-3 bg-primary px-7 py-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-[#09233C] transition hover:bg-white"
                 >
                   Request a quote
@@ -256,7 +256,7 @@ const ServicePage = () => {
 
                 <div className="mt-8">
                   <a
-                    href="tel:+61253013397"
+                    href="tel:0253013397"
                     className="inline-flex items-center justify-center gap-3 bg-[#09233C] px-7 py-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-primary hover:text-[#09233C]"
                   >
                     {service.ctaLabel}
